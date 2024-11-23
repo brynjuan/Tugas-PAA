@@ -46,3 +46,19 @@ Merge(left, right, array)
         j = j + 1
         k = k + 1
                                         # Operasi penggabungan secara total tetap O(n)
+
+#1.Analisa Bubble Sort
+#Bubble Sort adalah algoritma berbasis perbandingan yang melakukan iterasi berulang untuk mengurutkan elemen. 
+#Dalam kasus terburuk, ketika array terurut terbalik, setiap elemen dibandingkan dengan semua elemen lainnya,
+#menghasilkan kompleksitas O(n2)O(n^2). Pada kasus rata-rata, algoritma ini tetap membutuhkan jumlah iterasi 
+#yang serupa karena data acak masih memerlukan banyak perbandingan dan pertukaran, sehingga kompleksitasnya adalah 
+#Θ(n2)\Theta(n^2). Namun, dalam kasus terbaik, jika array sudah terurut, algoritma dapat dioptimalkan menggunakan 
+#flag untuk mendeteksi bahwa tidak ada elemen yang perlu ditukar. Hal ini mengurangi waktu eksekusi menjadi linear,
+#yaitu Θ(n)\Theta(n).
+
+#2.Analisa Merge Sort
+#Merge Sort, di sisi lain, menggunakan pendekatan divide-and-conquer dengan membagi array menjadi bagian kecil,
+#mengurutkannya secara rekursif, lalu menggabungkannya kembali. Pada setiap level rekursi, proses penggabungan 
+#membutuhkan waktu O(n)O(n), dan terdapat log⁡2(n)\log_2(n) level rekursi, menghasilkan kompleksitas total O(nlog⁡n)O(n \log n)
+#dalam kasus terburuk. Karena jumlah operasi tidak tergantung pada urutan awal data, kompleksitas rata-rata juga Θ(nlog⁡n)\Theta(n \log n), 
+#begitu pula pada kasus terbaik. Hal ini membuat Merge Sort lebih efisien dan konsisten dibandingkan Bubble Sort, terutama untuk data berukuran besar.
